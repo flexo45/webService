@@ -1,8 +1,5 @@
-package L2.accounts;
+package account;
 
-/**
- * Created by m.guriev on 16.02.2016.
- */
 public class UserProfile {
     private final String login;
     private final String pass;
@@ -12,12 +9,6 @@ public class UserProfile {
         this.login = login;
         this.pass = pass;
         this.email = email;
-    }
-
-    public UserProfile(String login) {
-        this.login = login;
-        this.pass = login;
-        this.email = login;
     }
 
     public String getLogin() {
