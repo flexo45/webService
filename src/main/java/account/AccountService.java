@@ -1,6 +1,6 @@
 package account;
 
-public interface IAccountService {
+public interface AccountService {
     void addNewUser(UserProfile userProfile);
     UserProfile getUserByLogin(String login);
     UserProfile getUserBySessionId(String sessionId);

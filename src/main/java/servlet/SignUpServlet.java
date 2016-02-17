@@ -1,6 +1,6 @@
 package servlet;
 
-import account.IAccountService;
+import account.AccountService;
 import account.UserProfile;
 
 import javax.servlet.ServletException;
@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class SignUpServlet extends HttpServlet {
-    private final IAccountService accountService;
+    private final AccountService accountService;
 
-    public SignUpServlet(IAccountService accountService) {
+    public SignUpServlet(AccountService accountService) {
         this.accountService = accountService;
     }
 

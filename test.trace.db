@@ -1,110 +1,4 @@
-2016-02-17 15:40:09 database: wrong user or password; user: "SA"
-org.h2.message.DbException: Ð�ÐµÐ²ÐµÑ€Ð½Ð¾Ðµ Ð¸Ð¼Ñ� Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ� Ð¸Ð»Ð¸ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ
-Wrong user name or password [28000-191]
-	at org.h2.message.DbException.get(DbException.java:179)
-	at org.h2.message.DbException.get(DbException.java:155)
-	at org.h2.message.DbException.get(DbException.java:144)
-	at org.h2.engine.Engine.openSession(Engine.java:106)
-	at org.h2.engine.Engine.openSession(Engine.java:175)
-	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
-	at org.h2.engine.Engine.createSession(Engine.java:136)
-	at org.h2.engine.Engine.createSession(Engine.java:28)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
-	at org.h2.Driver.connect(Driver.java:72)
-	at org.h2.server.web.WebServer.getConnection(WebServer.java:735)
-	at org.h2.server.web.WebApp.login(WebApp.java:955)
-	at org.h2.server.web.WebApp.process(WebApp.java:211)
-	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
-	at org.h2.server.web.WebThread.process(WebThread.java:133)
-	at org.h2.server.web.WebThread.run(WebThread.java:89)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.h2.jdbc.JdbcSQLException: Ð�ÐµÐ²ÐµÑ€Ð½Ð¾Ðµ Ð¸Ð¼Ñ� Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ� Ð¸Ð»Ð¸ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ
-Wrong user name or password [28000-191]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
-	... 19 more
-2016-02-17 16:33:40 database: flush
-org.h2.message.DbException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
-General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
-	at org.h2.message.DbException.get(DbException.java:168)
-	at org.h2.message.DbException.convert(DbException.java:295)
-	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
-	at org.h2.mvstore.MVStore.panic(MVStore.java:373)
-	at org.h2.mvstore.MVStore.<init>(MVStore.java:356)
-	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
-	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
-	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
-	at org.h2.engine.Database.getPageStore(Database.java:2460)
-	at org.h2.engine.Database.open(Database.java:692)
-	at org.h2.engine.Database.openDatabase(Database.java:270)
-	at org.h2.engine.Database.<init>(Database.java:264)
-	at org.h2.engine.Engine.openSession(Engine.java:65)
-	at org.h2.engine.Engine.openSession(Engine.java:175)
-	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
-	at org.h2.engine.Engine.createSession(Engine.java:136)
-	at org.h2.engine.Engine.createSession(Engine.java:28)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
-	at org.h2.Driver.connect(Driver.java:72)
-	at org.h2.server.web.WebServer.getConnection(WebServer.java:735)
-	at org.h2.server.web.WebApp.login(WebApp.java:955)
-	at org.h2.server.web.WebApp.process(WebApp.java:211)
-	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
-	at org.h2.server.web.WebThread.process(WebThread.java:133)
-	at org.h2.server.web.WebThread.run(WebThread.java:89)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.h2.jdbc.JdbcSQLException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
-General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
-	... 28 more
-Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]
-	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
-	at org.h2.mvstore.FileStore.open(FileStore.java:172)
-	at org.h2.mvstore.MVStore.<init>(MVStore.java:342)
-	... 23 more
-2016-02-17 16:33:46 database: flush
-org.h2.message.DbException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
-General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
-	at org.h2.message.DbException.get(DbException.java:168)
-	at org.h2.message.DbException.convert(DbException.java:295)
-	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
-	at org.h2.mvstore.MVStore.panic(MVStore.java:373)
-	at org.h2.mvstore.MVStore.<init>(MVStore.java:356)
-	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
-	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
-	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
-	at org.h2.engine.Database.getPageStore(Database.java:2460)
-	at org.h2.engine.Database.open(Database.java:692)
-	at org.h2.engine.Database.openDatabase(Database.java:270)
-	at org.h2.engine.Database.<init>(Database.java:264)
-	at org.h2.engine.Engine.openSession(Engine.java:65)
-	at org.h2.engine.Engine.openSession(Engine.java:175)
-	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
-	at org.h2.engine.Engine.createSession(Engine.java:136)
-	at org.h2.engine.Engine.createSession(Engine.java:28)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
-	at org.h2.Driver.connect(Driver.java:72)
-	at org.h2.server.web.WebServer.getConnection(WebServer.java:735)
-	at org.h2.server.web.WebApp.login(WebApp.java:955)
-	at org.h2.server.web.WebApp.process(WebApp.java:211)
-	at org.h2.server.web.WebApp.processRequest(WebApp.java:170)
-	at org.h2.server.web.WebThread.process(WebThread.java:133)
-	at org.h2.server.web.WebThread.run(WebThread.java:89)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.h2.jdbc.JdbcSQLException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
-General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
-	... 28 more
-Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]
-	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
-	at org.h2.mvstore.FileStore.open(FileStore.java:172)
-	at org.h2.mvstore.MVStore.<init>(MVStore.java:342)
-	... 23 more
-2016-02-17 17:42:08 database: flush
+2016-02-17 18:45:01 database: flush
 org.h2.message.DbException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
 	at org.h2.message.DbException.get(DbException.java:168)
@@ -141,11 +35,11 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
 	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
-	at L3.DBManager.createSessionFactory(DBManager.java:89)
-	at L3.DBManager.<init>(DBManager.java:29)
-	at L3.accounts.AccountService.<init>(AccountService.java:19)
-	at ServletManager.addDBAuthServlets(ServletManager.java:22)
-	at Main.main(Main.java:22)
+	at L3.DBManager.createSessionFactory(DBManager.java:86)
+	at L3.DBManager.<init>(DBManager.java:26)
+	at L3.accounts.AccountService.<init>(AccountService.java:16)
+	at ServletManager.addDBAuthServlets(ServletManager.java:19)
+	at Main.main(Main.java:19)
 Caused by: org.h2.jdbc.JdbcSQLException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
@@ -155,7 +49,7 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.g
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:342)
 	... 34 more
-2016-02-17 17:53:16 database: flush
+2016-02-17 18:45:28 database: flush
 org.h2.message.DbException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
 	at org.h2.message.DbException.get(DbException.java:168)
@@ -192,11 +86,62 @@ General error: "java.lang.IllegalStateException: The file is locked: nio:C:/User
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
 	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
-	at L3.DBManager.createSessionFactory(DBManager.java:89)
-	at L3.DBManager.<init>(DBManager.java:29)
-	at L3.accounts.AccountService.<init>(AccountService.java:19)
-	at ServletManager.addDBAuthServlets(ServletManager.java:22)
-	at Main.main(Main.java:22)
+	at L3.DBManager.createSessionFactory(DBManager.java:86)
+	at L3.DBManager.<init>(DBManager.java:26)
+	at L3.accounts.AccountService.<init>(AccountService.java:16)
+	at ServletManager.addDBAuthServlets(ServletManager.java:19)
+	at Main.main(Main.java:19)
+Caused by: org.h2.jdbc.JdbcSQLException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	... 39 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:773)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:342)
+	... 34 more
+2016-02-17 18:45:38 database: flush
+org.h2.message.DbException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
+	at org.h2.message.DbException.get(DbException.java:168)
+	at org.h2.message.DbException.convert(DbException.java:295)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:94)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:373)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:356)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:2888)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:154)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:99)
+	at org.h2.engine.Database.getPageStore(Database.java:2460)
+	at org.h2.engine.Database.open(Database.java:692)
+	at org.h2.engine.Database.openDatabase(Database.java:270)
+	at org.h2.engine.Database.<init>(Database.java:264)
+	at org.h2.engine.Engine.openSession(Engine.java:65)
+	at org.h2.engine.Engine.openSession(Engine.java:175)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:153)
+	at org.h2.engine.Engine.createSession(Engine.java:136)
+	at org.h2.engine.Engine.createSession(Engine.java:28)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:349)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:107)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:91)
+	at org.h2.Driver.connect(Driver.java:72)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:55)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:75)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:106)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.buildJdbcConnectionAccess(JdbcServicesImpl.java:260)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:94)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:111)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:234)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:206)
+	at org.hibernate.cfg.Configuration.buildTypeRegistrations(Configuration.java:1887)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1845)
+	at L3.DBManager.createSessionFactory(DBManager.java:86)
+	at L3.DBManager.<init>(DBManager.java:26)
+	at L3.accounts.AccountService.<init>(AccountService.java:16)
+	at ServletManager.addDBAuthServlets(ServletManager.java:19)
+	at Main.main(Main.java:19)
 Caused by: org.h2.jdbc.JdbcSQLException: Ð’Ð½ÑƒÑ‚Ñ€ÐµÐ½Ð½Ñ�Ñ� Ð¾ÑˆÐ¸Ð±ÐºÐ°: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]"
 General error: "java.lang.IllegalStateException: The file is locked: nio:C:/Users/m.guriev/IdeaProjects/webService/test.mv.db [1.4.191/7]" [50000-191]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)

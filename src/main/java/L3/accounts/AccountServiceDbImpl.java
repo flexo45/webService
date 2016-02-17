@@ -3,16 +3,15 @@ package L3.accounts;
 import L3.DBException;
 import L3.DBManager;
 import L3.dataSet.UsersDataSet;
-import account.IAccountService;
 import account.UserProfile;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AccountService implements IAccountService {
+public class AccountServiceDbImpl implements account.AccountService {
     private final DBManager dbManager;
     private final Map<String, UserProfile> sessionIdToProfile;
 
-    public AccountService() {
+    public AccountServiceDbImpl() {
         dbManager = new DBManager();
         sessionIdToProfile = new HashMap<>();
     }

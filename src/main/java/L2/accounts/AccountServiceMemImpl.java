@@ -1,16 +1,15 @@
 package L2.accounts;
 
-import account.IAccountService;
 import account.UserProfile;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class AccountService implements IAccountService {
+public class AccountServiceMemImpl implements account.AccountService {
     private final Map<String, UserProfile> loginToProfile;
     private final Map<String, UserProfile> sessionIdToProfile;
 
-    public AccountService() {
+    public AccountServiceMemImpl() {
         loginToProfile = new HashMap<>();
         sessionIdToProfile = new HashMap<>();
     }
