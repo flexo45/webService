@@ -1,1 +1,1 @@
-java -jar server.jar
+java -jar -Dlog4j.configurationFile=cfg/log4j2.xml server.jar 8080

@@ -1,4 +1,4 @@
-package servlet;
+package servlets;
 
 import account.AccountService;
 import account.UserProfile;
